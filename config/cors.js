@@ -3,7 +3,7 @@ import cors from "cors";
 
 const allowedOrigins = [
   "http://localhost:5173",
-  "https://product-manager-frontend-psi.vercel.app/"
+  "https://product-manager-frontend-psi.vercel.app"
 ];
 
 const corsOptions = {
