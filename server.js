@@ -4,11 +4,12 @@ import mongoose from "mongoose";
 import { corsMiddleware } from "./config/cors.js";
 import productRoutes from "./routes/productRoute.js";
 
+app.use(corsMiddleware);
+app.use(express.json());
+
 dotenv.config();
 const app = express();
 
-app.use(corsMiddleware);
-app.use(express.json());
 
 app.use("/api/products", productRoutes);
 
