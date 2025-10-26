@@ -3,7 +3,6 @@ import cors from "cors";
 const allowedOrigins = [
   "http://localhost:5173",
   "https://product-manager-frontend-psi.vercel.app",
-  "https://productmanager-backend-vd2u.onrender.com"
 ];
 
 const corsOptions = {
@@ -17,5 +16,4 @@ const corsOptions = {
   credentials: true,
 };
 
-
-export default cors(corsOptions);
+export const corsMiddleware = cors(corsOptions);
