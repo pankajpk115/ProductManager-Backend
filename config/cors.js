@@ -8,13 +8,12 @@ const allowedOrigins = [
 
 const corsOptions = {
   origin: (origin, callback) => {
-    if (!origin || allowedOrigins.includes(origin)) {
+    if (!origin) return callback(null, true);
+    if (allowedOrigins.some(url => origin.startsWith(url))) {
       callback(null, true);
     } else {
-      callback(new Error('Not allowed by CORS'));
+      callback(new Error(`CORS blocked for origin: ${origin}`));
     }
   },
   credentials: true,
 };
-
-export default cors(corsOptions);
