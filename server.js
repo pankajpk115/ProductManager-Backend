@@ -2,7 +2,7 @@ import express from "express";
 import dotenv from "dotenv";
 import mongoose from "mongoose";
 import { corsMiddleware } from "./config/cors.js";
-import productRoutes from "./routes/productRoutes.js";
+import productRoutes from "./routes/productRoute.js";
 
 dotenv.config();
 const app = express();
